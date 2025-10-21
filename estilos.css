@@ -1,0 +1,44 @@
+/* CCS DOCUMENT */
+@charset "UTF-8";
+
+@font-face {
+    font-family:"Outfit-Regular";
+    src: url(fuentes/Outfit-Regular.ttf) format(.ttf); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"Outfit-Bold";
+    src: url(fuentes/Outfit-Bold.ttf) format(.ttf) ;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:"Outfit-ExtraLight";
+    src: url(fuentes/Outfit-ExtraLight.ttf) format(.ttf) ;
+    font-weight: light
+    font-style: normal;
+}
+
+/* Configuraciones Generales */
+
+h1,h2{
+    font-family: "Outfit-Bold", sans-serif;
+    font-size: 36px;
+}
+
+/* Navegacion */
+
+
+/* Index */
+
+
+/* Proyecto */
+
+
+/* Contacto */
+
+
+/* Footer */
