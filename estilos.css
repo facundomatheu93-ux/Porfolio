@@ -3,36 +3,159 @@
 
 @font-face {
     font-family:"Outfit-Regular";
-    src: url(fuentes/Outfit-Regular.ttf) format(.ttf); 
+    src: url(fuentes/Outfit-Regular.ttf) format("truetype"); 
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family:"Outfit-Bold";
-    src: url(fuentes/Outfit-Bold.ttf) format(.ttf) ;
+    font-family:"outfit-bold";
+    src: url(fuentes/Outfit-Bold.ttf) format("truetype") ;
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face{
-    font-family:"Outfit-ExtraLight";
-    src: url(fuentes/Outfit-ExtraLight.ttf) format(.ttf) ;
+    font-family:"outfit-extralight";
+    src: url(fuentes/Outfit-ExtraLight.ttf) format("truetype") ;
     font-weight: light
     font-style: normal;
 }
 
 /* Configuraciones Generales */
 
+* {
+    background-color: #faffc9;;
+
+}
+
 h1,h2{
-    font-family: "Outfit-Bold", sans-serif;
-    font-size: 36px;
+    font-family: "outfit-bold", sans-serif;
+    font-size: 60pt;
+    color: #93443F;
+    margin: 0px;
+}
+
+h3 {
+    font-family: "outfit-bold", sans-serif;
+    font-size: 30pt;
+    color: #000000;
+    margin: 0px;
+}
+
+h4 {
+    font-family: "outfit-extralight", sans-serif;
+    font-size: 30pt;
+    color: #000000;
+    margin: 0px;
+}
+
+p {
+    font-family: "outfit-regular", sans-serif;
+    font-size: 25pt;
+    color: #000000;
+    margin: 0px;
 }
 
 /* Navegacion */
 
 
 /* Index */
+
+
+/* Section Presentacion */
+#presentacion {
+    display: inline-flex;
+    align-items: center;
+    gap: 64px;
+    margin: 104px;
+    
+}
+#presentacion img {
+    border-radius: 20%;
+}
+
+.texto-presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;   
+}
+.texto-presentacion h1 {
+    margin: 0px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.texto-presentacion p {
+    display: block;
+    margin: 0px;
+}
+
+/* Educacion */
+
+.separador {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 72px;
+    margin: 104px;
+}
+
+#educacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#habilidades-hobbies {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 64px;
+    
+}
+
+#educacion ul {
+    padding: 0px; 
+    gap: 32px;
+
+}
+
+.secundaria, .uba, .unla {
+    display: flex;
+    flex-direction: column;
+   
+    gap: 8px;
+    align-self: stretch;
+    margin: 0px;
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.img-programas {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.img-hobbies {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    list-style-type: none
+    padding: 0px;
+}
+
+
 
 
 /* Proyecto */
