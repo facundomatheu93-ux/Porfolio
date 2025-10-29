@@ -18,7 +18,7 @@
 @font-face{
     font-family:"outfit-extralight";
     src: url(fuentes/Outfit-ExtraLight.ttf) format("truetype") ;
-    font-weight: light
+    font-weight: light ;
     font-style: normal;
 }
 
@@ -80,7 +80,7 @@ nav a {
 }
 
 a.effect-underline:after {
-	content: '';
+    content: '';
   position: absolute;
   left: 0;
   display: inline-block;
@@ -111,32 +111,31 @@ a.effect-underline:hover:after {
 #presentacion {
     display: inline-flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 64px;
     margin: 104px 104px 0px 104px;
-    
-    
 }
+
 #presentacion img {
     border-radius: 20%;
+    max-width: 628px;
 }
 
 .texto-presentacion {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 8px;   
-    flex: 1;
+    width: 70%;
 }
+
 .texto-presentacion h1 {
     margin: 0px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
+
 .texto-presentacion p {
-    display: block;
-    margin: 0px;
+    width: 100%;    
 }
 
 /* Educacion */
@@ -144,11 +143,9 @@ a.effect-underline:hover:after {
 .separador {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 72px;
     margin: 104px;
-    /*width: 1920px;*/
 }
 
 #educacion {
@@ -201,7 +198,7 @@ a.effect-underline:hover:after {
     display: flex;
     flex-direction: row;
     gap: 8px;
-    list-style-type: none
+    list-style-type: none ;
     padding: 0px;
 }
 
@@ -239,33 +236,21 @@ h5 {
     
 }
 
-main figure img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-main figure:hover img {
-	-webkit-transform: scale(1.2);
-	transform: scale(1.2);
-}
 
-
-
-.textotaller4,{
+.textotaller4, .textotaller3, .textotaller2 {
     opacity: 0;
-}
-
-
-.textotaller4:hover, .textotaller3:hover, .textotaller2:hover   {
-    opacity: 1;
     background-color: #93443F;
     border-radius: 60px;
     max-width: 455px;
     max-height: 160px;
     padding: 25px;
     position: relative ;
-    top: -175px;
+    top: -150px
+}
+
+
+.textotaller4:hover, .textotaller3:hover, .textotaller2:hover   {
+    opacity: 1;
 
 }
 
@@ -326,10 +311,10 @@ main figure:hover img {
 #taller1tp3,#taller3tp3 {
     background-color: #93443F;
     display: flex;
-    flex-direction: row;
-    padding: 70px;
+    padding: 140px;
     align-items: center;
-    justify-content: space-evenly;
+    flex-direction: row-reverse;
+
 }
  
 .proyectotaller2 p, .proyectotaller4 p {
@@ -366,6 +351,72 @@ main figure:hover img {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.carrusel {
+    height: 200px;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.carrusel {
+  position: relative;
+}
+
+.carrusel img {
+    position: absolute;
+    top: -155px;
+    left: -1600px;
+    opacity: 0;
+    animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+/* Efecto hover imagenes proyecto
+main figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+main figure:hover img {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+} */
+
+
 
 /* HTML Contacto */
 
@@ -416,4 +467,160 @@ footer p, h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+/* Responsive Tablet Nav */
+
+@media screen and (max-width: 1200px) {
+    nav {
+    display: flex;
+    background-color: #93443F;
+    padding: 50px;
+    gap: 50px;
+    flex-direction: row;
+    justify-content: flex-end;
+    }
+
+    nav a {
+    font-family: "outfit-bold", sans-serif;
+    font-size: 40pt;
+    color: #FCFFE2;
+    text-decoration: none;
+    }
+}
+
+/* Responsive Mobile Nav */
+
+@media screen and (max-width: 450px) {
+    nav {
+    display: flex;
+    background-color: #93443F;
+    padding: 50px;
+    gap: 50px;
+    flex-direction: row;
+    justify-content: flex-end;
+    }
+
+    nav a {
+    font-family: "outfit-bold", sans-serif;
+    font-size: 40pt;
+    color: #FCFFE2;
+    text-decoration: none;
+    }
+}
+
+/* Responsive Tablet footer */
+
+@media screen and (max-width: 1200px) {
+        
+    #contactame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin: 0px 0px 20px 0px;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+   
+}
+
+/* Responsive Mobile footer */
+
+@media screen and ( max-width: 450px ) {
+    
+    #contactame {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contacto {
+        display: flex;
+        gap: 400px;
+    }
+
+    .redessociales {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+}
+
+}   
+
+
+/* Responsive Tablet Index */
+
+@media screen and (max-width: 1200px) {
+    #presentacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        margin: 50px;
+    }
+
+    h1 {
+        font-size: 55pt;
+    }
+
+   #educacion ul {
+       max-width: 70%;
+    }
+
+    #educacion {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        margin: 0px 0px 32px 115px;
+    }
+
+    #habilidades-hobbies {
+        align-items: center;
+        max-width: 1000px;
+    }
+
+    .separador {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .textotaller2, .textotaller3, .textotaller4 {
+        display: flex;  
+        opacity: 1;
+        flex-direction: column;
+        gap: 8px;
+        top: auto;
+    }
+
+    .taller2, .taller3, .taller4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        margin: 24px 70px 0px 70px;
+        gap: 12px;
+    }
+
+    .carruselproyecto {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    #proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 40px 0px;
+
+    }
+
 }
