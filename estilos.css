@@ -525,8 +525,8 @@ main figure:hover img {
     justify-content: space-evenly;  
 }
 
-body h1 {
-    margin: 40px
+.tituloformulario{
+    margin: 40px;
 }
 
 #contacto p {
