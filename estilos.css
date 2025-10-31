@@ -313,10 +313,16 @@ h5 {
 
 #presentacionproyecto {
     display: flex;
+    gap: 32px;
+    margin: 60px;
+    pading: 1500px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
-    margin: 104px 104px 104px 190px;
+    padding: 60px;
+}
+
+#presentacionproyecto p {
+    max-width: 1500px;
 }
 
 .proyectotaller1 p, .proyectotaller3 p {
@@ -345,6 +351,7 @@ h5 {
 
 #taller1tp3 img, #taller3tp3 img {
     border-radius: 100px;
+    margin: 0px 0px 0px 50px;
 }
 
 #taller1tp3,#taller3tp3 {
@@ -353,7 +360,6 @@ h5 {
     padding: 140px;
     align-items: center;
     flex-direction: row-reverse;
-
 }
  
 .proyectotaller2 p, .proyectotaller4 p {
@@ -385,10 +391,11 @@ h5 {
 
 #taller2tp4,#taller4tp4 {
     display: flex;
-    flex-direction: row-reverse;
+    margin: 70px;
     padding: 70px;
     align-items: center;
-    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 .carrusel {
@@ -443,6 +450,57 @@ img:nth-child(5) {
   animation-delay: 8s;
 }
 
+.carrusel {
+    height: 200px;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.carruselderecha {
+  position: relative;
+}
+
+.carruselderecha img {
+    position: absolute;
+    top: -240px;
+    left: 190px;
+    opacity: 0;
+    animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
 /* Efecto hover imagenes proyecto
 main figure img {
 	-webkit-transform: scale(1);
@@ -461,10 +519,18 @@ main figure:hover img {
 
 #contacto {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-    margin: 104px 104px 104px 190px;
+    flex-direction: row;
+    gap: 64px;
+    margin: 70px;
+    justify-content: space-evenly;  
+}
+
+body h1 {
+    margin: 40px
+}
+
+#contacto p {
+    max-width: 800px;
 }
 
 .instrucciones {
@@ -570,7 +636,7 @@ footer p, h5 {
     display: flex;
     background-color: #93443F;
     padding: 50px;
-    gap: 50px;
+    gap: 20px;
     flex-direction: row;
     justify-content: flex-end;
     }
@@ -703,6 +769,10 @@ footer p, h5 {
     font-size: 15pt;
     }
 
+    #proyectos p {
+    font-size: 12pt;
+    }
+
     .texto-presentacion {
         width: 90%;
     }
@@ -761,8 +831,10 @@ footer p, h5 {
     }
 
     .textotaller2, .textotaller3, .textotaller4 {
-    max-width: 350px;
-    max-height: 180px;
+    max-width: 315px;
+    max-height: 160px;
+    gap: 0px;
+    padding: 20px;
     }
 
     #contactame {
@@ -774,4 +846,55 @@ footer p, h5 {
     gap: 24px;
     }
 
+}
+
+/* galeria */
+
+#presentaciongaleria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin: 50px
+}
+#galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.galeriafotos img {
+    margin: 10px;
+    border-radius: 40px;
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/*
+.galeriafotos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.galeriafotos img:active {
+    transform: scale(1.5);
+}
+*/
+
+.galeriafotos input {
+  display: none;
+}
+
+.galeriafotos img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Cuando el checkbox está marcado (click activado) */
+.galeriafotos input:checked + label img {
+  transform: scale(1.5);
+  z-index: 10;
 }

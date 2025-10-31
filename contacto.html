@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Poner aqui una descripcion del sitio web">
     <meta name ="author" content="Facundo Gabriel Matheu">
     <meta name="keywords" content="Porfolio, Diseño, Comunicación Visual, Facundo Matheu">
     <title>Contacto</title>
@@ -14,17 +13,18 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="proyecto.html">Proyecto</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="index.html" class="effect-underline">Inicio</a>
+            <a href="proyecto.html"class="effect-underline">Proyecto</a>
+            <a href="galeria.html"class="effect-underline">Galeria</a>
+            <a href="contacto.html" class="effect-underline">Contacto</a>
         </nav>
     </header>
     <main>
+        <h1>Formulario de Contacto</h1>
         <section id="contacto">
-            <h1>Formulario de Contacto</h1>
             <form method="post" action="mailto:facundogmatheu@gmail.com?subject='Correo enviado desde el fomulario de porfolio'" target="_blank" enctype="text/plain">
                 <article class="instrucciones">
-                    <p>Por favor, complete el siguiente formulario para ponerse en contacto conmigo.</p>
+                    <p>Por favor, complete el siguiente formulario para ponerse en contacto.</p>
                     <label form="Nombre y Apellido">Nombre y Apellido</label>
                     <input type="text" name="Nombre y Apellido" id="nombre-apellido" maxlength="30" placeholder="Ejemplo : Facundo Matheu" "required>
 
@@ -47,8 +47,10 @@
                     </div>
                 </article>
             </form>
+            
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/0sQR1p7NyAUqMPmWdZ6UBd?utm_source=generator" width="700" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>  
 
-        </section>
 
     </main>
 
