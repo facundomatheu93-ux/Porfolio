@@ -145,7 +145,7 @@ a.effect-underline:hover:after {
     flex-direction: row;
     justify-content: space-around;
     gap: 72px;
-    margin: 104px;
+    margin: 60px;
 }
 
 #educacion {
@@ -231,12 +231,6 @@ h5 {
     margin: 0px;
 }
 
-#proyectos img {
-    border-radius: 80px;
-    
-}
-
-
 .textotaller4, .textotaller3, .textotaller2 {
     opacity: 0;
     background-color: #93443F;
@@ -244,30 +238,75 @@ h5 {
     max-width: 455px;
     max-height: 160px;
     padding: 25px;
-    position: relative ;
-    top: -150px
+    transition: opacity 250ms ease, visibility 250ms ease;
+  
 }
 
+.taller4:hover {
+    justify-content: center;
 
-.textotaller4:hover, .textotaller3:hover, .textotaller2:hover   {
-    opacity: 1;
-
+        .textotaller4{
+            opacity: 1;
+            display: flex ;
+            flex-direction: column;}
 }
 
+.taller3:hover {
+    justify-content: center;
 
+        .textotaller3 {
+            opacity: 1;
+            display: flex ;
+            flex-direction: column;}
+}
 
+.taller2:hover {
+    justify-content: center;
 
-.taller4, .taller3, .taller2 {
+        .textotaller2 {
+            opacity: 1;
+            display: flex ;
+            flex-direction: column;}
+}
+
+.taller4 {
+    background-image: url(fotos/taller-4/taller-de-diseño-4-tp3.jpg);
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    border-radius: 80px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin:24px 70px 0px 70px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.taller3 {
+    background-image: url(fotos/taller-3/taller-de-diseño-3-tp3.jpg);
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    border-radius: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.taller2 {
+    background-image: url(fotos/taller-2/taller-de-diseño-2-tp.jpg);
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    border-radius: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .carruselproyecto {
     display: flex;
-    flex-direction: row ;
-    justify-content: space-around;
+    gap: 120px;
+    margin: 40px 0px 50px 80px;
+    max-width: 1920px;
 }
 
 /* HTML Proyecto */
@@ -420,6 +459,60 @@ main figure:hover img {
 
 /* HTML Contacto */
 
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    margin: 104px 104px 104px 190px;
+}
+
+.instrucciones {
+    font-family: "outfit-bold", sans-serif;
+    font-size: 20pt;
+    color: #93443F;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    max-width: 800px;
+    height: 40px;
+    padding: 5px;
+    border :5px solid;
+    border-color: #93443F;
+    border-radius: 12px;
+}
+
+textarea {
+    max-width: 800px;
+    height: 200px;
+    padding: 5px;
+    border :5px solid;
+    border-color: #93443F;
+    border-radius: 12px;
+}
+
+
+input[type="submit"], input[type="reset"] {
+    width: 150px;
+    background-color: #93443F;
+    color: #FCFFE2;
+    font-family: "outfit-bold", sans-serif;
+    font-size: 20pt;
+    border: none;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.boton {
+    display: flex;
+    gap: 16px;
+}
+
+
 
 /* Footer */
 
@@ -488,31 +581,8 @@ footer p, h5 {
     color: #FCFFE2;
     text-decoration: none;
     }
-}
 
-/* Responsive Mobile Nav */
-
-@media screen and (max-width: 450px) {
-    nav {
-    display: flex;
-    background-color: #93443F;
-    padding: 50px;
-    gap: 50px;
-    flex-direction: row;
-    justify-content: flex-end;
-    }
-
-    nav a {
-    font-family: "outfit-bold", sans-serif;
-    font-size: 40pt;
-    color: #FCFFE2;
-    text-decoration: none;
-    }
-}
-
-/* Responsive Tablet footer */
-
-@media screen and (max-width: 1200px) {
+    /* Responsive Tablet footer */
         
     #contactame {
         display: flex;
@@ -529,36 +599,8 @@ footer p, h5 {
         gap: 8px;
     }
    
-}
+    /* Responsive Tablet Index */
 
-/* Responsive Mobile footer */
-
-@media screen and ( max-width: 450px ) {
-    
-    #contactame {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .contacto {
-        display: flex;
-        gap: 400px;
-    }
-
-    .redessociales {
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-    align-items: center;
-}
-
-}   
-
-
-/* Responsive Tablet Index */
-
-@media screen and (max-width: 1200px) {
     #presentacion {
         display: flex;
         flex-direction: column;
@@ -590,7 +632,8 @@ footer p, h5 {
     .separador {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        align-items: center;
+        margin: 0px 0px 40px 50px;
     }
 
     .textotaller2, .textotaller3, .textotaller4 {
@@ -607,6 +650,7 @@ footer p, h5 {
         align-items: center;  
         margin: 24px 70px 0px 70px;
         gap: 12px;
+        justify-content: flex-end;
     }
 
     .carruselproyecto {
@@ -621,6 +665,113 @@ footer p, h5 {
     align-items: center;
     margin: 0px 0px 40px 0px;
 
+    }
+
+    .redessociales {
+    display: flex;
+    align-items: center;
+    }  
+
+}
+
+
+@media screen and (max-width: 450px) {
+    nav {
+        padding: 70px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 20pt;
+    }
+
+    #presentacion img {
+    max-width: 425px;
+    max-height: 425px;        
+    }
+
+    #presentacion {
+        margin: 40px 0px 0px 0px
+    }
+
+    h1,h2 {
+        font-size: 30pt;
+    }
+
+    p {
+    font-size: 15pt;
+    }
+
+    .texto-presentacion {
+        width: 90%;
+    }
+
+    h3 {
+    font-size: 15pt;
+    }
+
+    h4 {
+    font-size: 15pt;
+    }
+
+    #educacion ul {
+    gap: 18px;
+    }
+
+    #educacion {
+    margin: 20px;
+    }
+
+    .separador {
+    margin: 0px;
+    }
+
+    .img-hobbies img {
+    max-width: 70px;
+    max-height: 70px;
+    }
+
+    .hobbies, .habilidades {
+    align-items: center;
+    }
+
+    .img-programas img {
+    max-width: 70px;
+    max-height: 70px;
+    }
+
+    #proyectos h2 {
+    padding: 0px;
+    }
+
+    .taller4, .taller3, .taller2 {
+    width: 400px;
+    height: 400px;
+    margin: 0px;
+    }
+
+    .carruselproyecto {
+    margin: 0px;
+    }
+
+    #proyectos {
+    margin: 20px;
+    gap: 20px;
+    }
+
+    .textotaller2, .textotaller3, .textotaller4 {
+    max-width: 350px;
+    max-height: 180px;
+    }
+
+    #contactame {
+    gap: 32px;
+    margin: 0px 0px 40px 0px;
+    }
+
+    .contacto {
+    gap: 24px;
     }
 
 }
